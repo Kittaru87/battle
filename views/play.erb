@@ -1,10 +1,12 @@
-<header>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body>
   <div class="container">
     <h1><%= @player_1_name %> vs. <%= @player_2_name %></h1>
   </div>
-</header>
-
-<body>
   <div class="container">
     <h2><%= @player_1_name %>: 60HP</h2>
   </div>
@@ -19,25 +21,3 @@
     </a>
   </div>
 </body>
-
-<style type="text/css">
-  .container {
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-  }
-  .btn {
-    margin-left: auto; 
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    font-size: 32px;
-    border-radius: 8px;
-    transition-duration: 0.2s;
-    align: center;
-  }
-  .btn:hover {
-    background-color: red;
-    color: white;
-  }
-</style>
