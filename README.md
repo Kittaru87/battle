@@ -1,18 +1,20 @@
 # Battle project 
 Week 3 Makers project to better our understanding of HTTP, response-request mechanisms, Sinatra, and Capybara.
 
-How to make it work
-server: 
-```
-ruby app.rb
-```
+**Tech used**:
+* Ruby,
+* Sinatra,
+* Capybara,
+* Selenium-webdriver,
+* RSpec
 
-client
-```
-rackup 
-#this finds port(9292) and is needed in order to initialize the server (?)
-```
-localhost:9292
+### How to make it work
+1. Fork this repo, and clone to your local machine
+2. Run the command `gem install bundle`
+3. When the installation completes, run `bundle` 
+4. Input `rackup` into the terminal. This finds the relevant port(9292)
+5. Input `localhost:9292` into your Firefox browser
+6. Play the game!
 
 ## User stories
 ```
