@@ -3,28 +3,30 @@
 <head>
   <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
-<body>
+<body class="main-background">
   <header class="container">
     <h1>Begin!</h1>
   </header>
   <main>
-    <section class="container">
-      <h2><%= @player_1_name %> vs. <%= @player_2_name %></h2>
-    </section>
-    <section class="container">
-      <h2><%= @player_1_name %>: 60HP</h2>
-      <img src="images/heart.png" class="heart-img">
-    </section>
-    <section class="container">
-      <h2><%= @player_2_name %>: 60HP</h2>
-      <img src="images/heart.png" class="heart-img">
-    </section>
-    <section class="container">
-      <a href="/attack">
-        <button class="btn">
-          Attack!
-        </button>
-      </a>
+    <section class="container-transparent">
+      <section class="container">
+        <h2><%= @player_1_name %> vs. <%= @player_2_name %></h2>
+      </section>
+      <section class="container">
+        <h2><%= @player_1_name %>: 60HP</h2>
+        <img src="images/heart.png" class="heart-img">
+      </section>
+      <section class="container">
+        <h2><%= @player_2_name %>: 60HP</h2>
+        <img src="images/heart.png" class="heart-img">
+      </section>
+      <section class="container">
+        <a href="/attack">
+          <button class="btn">
+            Attack!
+          </button>
+        </a>
+      </section>
     </section>
   </main>
 </body>

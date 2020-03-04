@@ -4,8 +4,31 @@ form {
   padding: 1em 2em;
   background-color: rgba(255, 255, 255, 0.4);
 }
-.body-background {
+input {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 4em;
+}
+h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 2em;
+}
+h3{
+  font-family: 'Caladea', serif;
+}
+.index-background {
   background-image: url("images/battle.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-background {
+  background-image: url("images/23099.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,11 +38,11 @@ form {
   justify-content: center;
   padding: 1em;
 }
-.container-submit {
-  padding: 0.5em;
-  margin: 0px auto;
-  text-align: center;
-  margin-top: 20px;
+.container-transparent {
+  background-color: rgba(255, 255, 255, 0.7);
+  justify-content: center;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 .sword-img {
   width: 120px;
@@ -41,6 +64,12 @@ form {
 .btn:hover {
   background-color: red;
   color: white;
+}
+.container-submit-btn {
+  padding: 0.5em;
+  margin: 0px auto;
+  text-align: center;
+  margin-top: 20px;
 }
 .submit_btn {
   margin-left: auto; 
