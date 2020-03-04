@@ -3,16 +3,29 @@
   <head>
     <link rel="stylesheet" type="text/css" href="/style.css" />
   </head>
-<body class="main-background">
-<main class="container">
-<header>
-<h2><%= @player_1_name %> attacked <%= @player_2_name %></h2>
-</header>
-  <section class="container">
-  </section>
-  <section class="container">
-  </section>
-</main>
-<footer>
-</footer>
+  <body class="main-background">
+    <header class="container">
+      <h1>Attack!</h1>
+    </header>
+    <main class="container">
+      <section class="container-transparent">
+
+        <section class="container">
+          <h2><%= @player_1.name %> attacked <%= @player_2.name %></h2>
+        </section>
+
+        <section class="container">
+          <a href="/play">
+            <button class="btn">
+              OK
+            </button>
+          </a>
+        </section>
+        
+        <section class="container">
+        </section>
+      </section>
+    </main>
+  <footer>
+  </footer>
 </body>
