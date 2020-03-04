@@ -17,20 +17,11 @@ require 'player'
       end
     end
 
-    describe '#attack' do
-      it 'damages the player' do
-        expect(brian).to receive(:reduce_hp)
-        sophia.attack(brian)
-      end
-    end
-
     describe "#reduce_hp" do
       it "should reduce the opponent's HP by 10" do
-        expect{sophia.attack(brian)}.to change {brian.hit_points}.by(-10)
+        expect{Game.new.attack(brian)}.to change {brian.hit_points}.by(-10)
       end
-
-    #   it "Should say game over when opponent's HP is 0" do
-        
-    # end
+      
+    end
 
   end

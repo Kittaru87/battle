@@ -7,11 +7,11 @@
     <header class="container">
       <h1>Attack!</h1>
     </header>
-    <main class="container">
+    <main>
       <section class="container-transparent">
 
         <section class="container">
-          <h2><%= @player_1.name %> attacked <%= @player_2.name %></h2>
+          <h2><%= @game.player_1.name %> attacked <%= @game.player_2.name %></h2>
         </section>
 
         <section class="container">
@@ -21,11 +21,12 @@
             </button>
           </a>
         </section>
-        
+
         <section class="container">
         </section>
       </section>
-    </main>
-  <footer>
+      <footer>
   </footer>
+    </main>
 </body>
+</html>

@@ -9,10 +9,6 @@ class Player
     @hit_points = hit_points
   end
 
-  def attack(opponent)
-    opponent.reduce_hp
-  end
-
   def reduce_hp
     @hit_points -= 10
   end
