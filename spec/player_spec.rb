@@ -1,7 +1,7 @@
 require 'player'
 
   describe Player do
-
+    
     subject(:sophia) { Player.new('Sophia') }
     subject(:brian) { Player.new('Brian') }
     
@@ -19,9 +19,9 @@ require 'player'
 
     describe "#reduce_hp" do
       it "should reduce the opponent's HP by 10" do
-        expect{Game.new.attack(brian)}.to change {brian.hit_points}.by(-10)
+        expect{Game.new(sophia, brian).attack(brian)}.to change {brian.hit_points}.by(-10)
       end
-      
+
     end
 
   end
