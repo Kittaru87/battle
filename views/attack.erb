@@ -22,7 +22,11 @@
 
         <section class="container"
           <section class="container-submit-btn">
-            <form action="/switch-turns" method="post">
+            <% if @game.game_over? %>
+              <form action="/game-over" method="post">
+            <% else %>
+              <form action="/switch-turns" method="post">
+            <% end %>
               <input type="submit" value="OK" class="submit_btn">
             </form>
           </section>

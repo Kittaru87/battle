@@ -17,11 +17,18 @@ class Game
 
   def attack(player)
     player.reduce_hp
-    # raise "#{player} has been defeated" if player.hit_points.zero?
   end
 
   def opponent_of(the_player)
-    @players.select { |player| player != the_player }.first
+    players_who_are_not(the_player).first
+  end
+
+  def game_over?
+    losing_players.any?
+  end
+
+  def loser
+    losing_players.first
   end
 
   def switch_turns
@@ -31,5 +38,13 @@ class Game
   private
 
   attr_reader :players
+
+  def losing_players
+    @players.select { |player| player.hit_points <= 0 }
+  end
+
+  def players_who_are_not(the_player)
+    @players.select { |player| player != the_player }
+  end
 
 end

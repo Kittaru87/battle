@@ -3,13 +3,11 @@ require 'game'
 describe Game do
 
   subject(:game) { described_class.new(player_1, player_2) }
-  let(:player_1) { double :player }
-  let(:player_2) { double :player }
+  subject(:finished_game) { described_class.new(dead_player, player_2) }
+  let(:player_1) { double :player, hit_points: 60 }
+  let(:player_2) { double :player, hit_points: 60 }
+  let(:dead_player) { double :player, hit_points: 0 }
 
-  it "initializes with Player 1" do
-    expect(subject).to have_attributes(current_turn: player_1)
-  end
-  
   describe "#player_1" do
     it "returns player 1" do
       expect(game.player_1).to eq player_1
@@ -35,9 +33,21 @@ describe Game do
       expect(game.current_turn).to eq player_2
     end
   end
-    # it "Should say game over when opponent's HP is 0" do
-    #   5.times {game.attack(player_2)}
-    #   expect{game.attack(player_2)}.to raise_error{'Player 2 has been defeated'}
-    # end
+
+  describe '#game_over?' do
+    it 'returns false if no-one is at 0HP' do
+      expect(game.game_over?).to be false
+    end
+
+    it 'returns true if at least one player is at 0HP' do
+      expect(finished_game.game_over?).to be true
+    end
+  end
+
+  describe '#loser' do
+    it 'returns a player on less than 0HP' do
+      expect(finished_game.loser).to eq dead_player
+    end
+  end
 
 end

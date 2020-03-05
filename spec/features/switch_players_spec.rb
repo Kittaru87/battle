@@ -1,5 +1,3 @@
-require './app.rb'
-
 feature 'Switch turns' do
 
   context 'seeing the current turn' do

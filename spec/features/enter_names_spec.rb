@@ -1,4 +1,3 @@
-require './app'
 
 feature 'entering names' do
   scenario 'can submit names of players' do
