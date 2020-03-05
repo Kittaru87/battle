@@ -18,5 +18,13 @@ feature 'viewing hit points' do
     expect(page).to have_content 'Brian: 50HP'
   end
 
+  scenario 'opponent attacks me and my HP are reduced by 10' do
+    sign_in_and_play
+    attack_and_ok
+    attack_and_ok
+    expect(page).not_to have_content 'Sophia: 60HP'
+    expect(page).to have_content 'Sophia: 50HP'
+  end
+
   
 end
