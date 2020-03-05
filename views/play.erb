@@ -5,14 +5,10 @@
   </head>
   <body>
     <header class="container">
-      <h1>Begin!</h1>
+    <h1><%= @game.player_1.name %> vs. <%= @game.player_2.name %></h1>
     </header>
     <main>
       <section class="container-transparent">
-
-        <section class="container">
-          <h2><%= @game.player_1.name %> vs. <%= @game.player_2.name %></h2>
-        </section>
 
         <section class="container">
           <h2><%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP</h2>
