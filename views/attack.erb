@@ -11,16 +11,19 @@
       <section>
 
         <section class="container">
+           <% if @game.current_turn == @game.player_1 %>
           <h2><%= @game.player_1.name %> attacked <%= @game.player_2.name %></h2>
+          <% else %>
+          <h2><%= @game.player_2.name %> attacked <%= @game.player_1.name %></h2>
+          <% end %>
         </section>
 
         <section class="container">
-          <a href="/play">
-            <button class="btn">
-              OK
-            </button>
-          </a>
+          <form action="/switch-turns" method="post">
+          <input type="submit" value="OK">
+          </form>
         </section>
+      
 
         <section class="container">
         </section>
