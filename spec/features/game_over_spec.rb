@@ -5,11 +5,12 @@ feature 'Game over' do
     before do
       sign_in_and_play
       attack_and_ok
-      allow(Kernel).to receive(:rand).and_return(60)
     end
 
     scenario 'Player 1 loses' do
       click_link 'Attack'
+      allow(Kernel).to receive(:rand).and_return(60)
+      click_link 'Game over'
       expect(page).to have_content 'Sophia loses!'
     end
   end

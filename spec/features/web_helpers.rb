@@ -7,5 +7,5 @@ end
 
 def attack_and_ok
   click_link 'Attack!'
-  click_button 'OK'
+  click_link 'OK'
 end

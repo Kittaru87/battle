@@ -1,1 +1,18 @@
-<%= @game.loser.name %> loses!
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1><%= @game.loser.name %> loses!</h1>
+    </header>
+    <section class="container">
+    <a href="/names">
+      <button class="btn">
+        Restart?
+      </button>
+    </a>
+    </section>
+  </body>
+</html>

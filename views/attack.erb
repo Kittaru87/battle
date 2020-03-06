@@ -20,16 +20,20 @@
           <% end %>
         </section>
 
-        <section class="container"
-          <section class="container-submit-btn">
-            <% if @game.game_over? %>
-              <form action="/game-over" method="post">
-            <% else %>
-              <form action="/switch-turns" method="post">
-            <% end %>
-              <input type="submit" value="OK" class="submit_btn">
-            </form>
-          </section>
+        <section class="container">
+          <% if @game.game_over? %>
+            <a href="/game-over">
+              <button class="btn">
+                Game over
+              </button>
+            </a>
+          <% else %>
+            <a href="/switch-turns">
+              <button class="btn">
+                OK
+              </button>
+            </a>
+          <% end %>
         </section>
 
       </section>
