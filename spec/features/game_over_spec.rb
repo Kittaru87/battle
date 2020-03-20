@@ -8,9 +8,7 @@ feature 'Game over' do
     end
 
     scenario 'Player 1 loses' do
-      click_link 'Attack'
-      allow(Kernel).to receive(:rand).and_return(60)
-      click_link 'Game over'
+      allow(Object).to receive(:rand).and_return(60)
       expect(page).to have_content 'Sophia loses!'
     end
   end
